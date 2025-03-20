@@ -64,8 +64,9 @@ def create_order(user_id, order_id, amount):
             VALUES (?, ?, ?)
         ''', (user_id, order_id, amount))
         conn.commit()
+        print(f"Создан новый заказ: {order_id} для пользователя {user_id}, сумма: {amount}")
 
-id
+
 def get_order_by_order_id(order_id):
     with sqlite3.connect(DB_NAME) as conn:
         cursor = conn.cursor()
