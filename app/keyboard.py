@@ -24,19 +24,26 @@ command_exit = InlineKeyboardMarkup(inline_keyboard=[
 command_exit_2 = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text = "Купить сейчас", callback_data= 'buy_now')],
     [InlineKeyboardButton(text = "🔙Назад в меню", callback_data='Exit_2')]
-])
+]) 
 
 
 payment_keyboard = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text="💳Оплатить по карте", callback_data="pay_card")],
+    [InlineKeyboardButton(text = "Оплатить по СБП", callback_data= 'pay_sbp')],
     [InlineKeyboardButton(text = "🔙Назад", callback_data="pay_exit")]
 ])
 
 
 paid_main = InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(text = "Ввести промокод", callback_data= 'promo')],
     [InlineKeyboardButton(text = "✅Оплачено!", callback_data='paid')]
 ])
 
 manager_callback = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text = "🧑‍💻Связаться с менеджером", url = "https://t.me/matyshen")]
+])
+
+
+paid_main_two = InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(text = "✅Оплачено!", callback_data='paid_two')]
 ])
